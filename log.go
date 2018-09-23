@@ -17,7 +17,11 @@ var (
 
 // Printf log to stdout if verbose enabled
 func Printf(format string, args ...interface{}) {
-	log.Printf(format, args...)
+	defaultLogger.Printf(format, args...)
+}
+
+func Errorf(format string, args ...interface{}) {
+	defaultLogger.Errorf(format, args...)
 }
 
 type Logger struct {
